@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Brand Plan | Architect Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --bg-black: #050505;
+            --card-gray: #0f0f12;
+            --accent-amber: #ffb800;
+        }
+        body {
+            background-color: var(--bg-black);
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            overflow-x: hidden;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .glass-panel {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+        }
+
+        .neon-glow {
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.15);
+        }
+
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .scan-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, transparent, rgba(0, 242, 255, 0.03), transparent);
+            transform: translateY(-100%);
+            animation: scan 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .phase-card {
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+        }
+
+        .phase-card:hover {
+            border-color: var(--neon-blue);
+            background: rgba(0, 242, 255, 0.02);
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="grid-overlay"></div>
+    <div class="scan-line"></div>
+
+    <!-- Interface Header -->
+    <header class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center border-b border-white/5 glass-panel">
+        <div class="flex items-center gap-4">
+            <div class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
+            <div class="mono text-[10px] uppercase tracking-[0.4em] text-white/80">
+                Architect Identity: <span class="text-cyan-400">Dale Jutzen</span>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-8 mono text-[9px] uppercase tracking-widest opacity-40">
+            <span>Auth_Level: Omega</span>
+            <span>Ref: 2027_DEPL_PROTOCOL</span>
+            <span class="text-amber-500">Secure Line Active</span>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-24">
+        
+        <!-- Objective -->
+        <section class="mb-32">
+            <div class="mono text-[10px] text-cyan-500 mb-4 tracking-[0.5em] uppercase">Executive_Summary</div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 text-white leading-tight">
+                The <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Brand Plan.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/50 max-w-2xl font-light leading-relaxed">
+                A non-intrusive architectural override. Transitioning legacy authority into digital dominance by bridging the gap between high-level production and actual reach.
+            </p>
+        </section>
+
+        <!-- Authority Asset (Tim Green) -->
+        <section class="grid md:grid-cols-2 gap-16 mb-40 items-center">
+            <div class="order-2 md:order-1">
+                <div class="mono text-[10px] text-amber-500 mb-6 tracking-widest uppercase">Target_Intelligence</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+                    When you’re interviewed by a giant like <span class="italic text-cyan-400">Tim Green...</span>
+                </h2>
+                <div class="space-y-6 text-white/60 leading-relaxed text-base">
+                    <p>
+                        The prestige of being interviewed by a legend on the level of a Fox News authority is an asset that cannot be wasted. Currently, your digital packaging is the bottleneck. 
+                    </p>
+                    <p>
+                        The content is elite; the distribution is stagnant. My role is to act as the **Brand Bodyguard**, ensuring the packaging matches the stature of the guest.
+                    </p>
+                </div>
+                
+                <div class="mt-10 p-6 glass-panel rounded-xl border-l-4 border-cyan-500">
+                    <h4 class="mono text-[11px] text-white uppercase mb-2 tracking-widest">Organic Funnel Directive</h4>
+                    <p class="text-sm opacity-50">
+                        Leveraging your social platforms to act as feeders. We funnel organic traffic from Instagram/TikTok directly into the YouTube ecosystem using high-authority archive hooks.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="order-1 md:order-2 relative">
+                <div class="absolute -inset-4 bg-cyan-500/5 blur-3xl rounded-full"></div>
+                <div class="relative glass-panel rounded-2xl p-2 aspect-[3/4] flex flex-col gap-2">
+                    <div class="h-1/2 bg-zinc-900 rounded-xl overflow-hidden relative group">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-700"></div>
+                        <div class="absolute bottom-4 left-4 mono text-[9px] text-white/40">REF: PRIME_ATHLETE_TIM_GREEN</div>
+                        <div class="w-full h-full flex items-center justify-center border border-white/5">
+                            <span class="mono text-[8px] opacity-20 uppercase tracking-widest">Visual_Asset_01_Locked</span>
+                        </div>
+                    </div>
+                    <div class="h-1/2 bg-zinc-900 rounded-xl overflow-hidden relative group">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-700"></div>
+                        <div class="absolute bottom-4 left-4 mono text-[9px] text-white/40">REF: LEGACY_AUTHORITY_CURRENT</div>
+                        <div class="w-full h-full flex items-center justify-center border border-white/5">
+                            <span class="mono text-[8px] opacity-20 uppercase tracking-widest">Visual_Asset_02_Locked</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reach Projection (The 61 Scale) -->
+        <section class="mb-40">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+                    <div>
+                        <div class="mono text-[10px] text-cyan-500 mb-2 uppercase tracking-[0.3em]">Projection_Logic</div>
+                        <h3 class="text-3xl font-bold text-white">Scaling Reach</h3>
+                    </div>
+                    <div class="text-left md:text-right">
+                        <div id="view-counter" class="text-6xl font-black text-cyan-400 mono">61</div>
+                        <div class="mono text-[9px] opacity-30 uppercase tracking-tighter">Current_Stagnation_Metric</div>
+                    </div>
+                </div>
+
+                <div id="graph-container" class="h-48 w-full flex items-end gap-[2px] mb-16">
+                    <!-- Dynamic Bars -->
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="phase-card glass-panel rounded-xl">
+                        <div class="mono text-[9px] text-cyan-500 mb-1">STG_01</div>
+                        <div class="text-sm font-bold text-white/90">Archive Audit</div>
+                    </div>
+                    <div class="phase-card glass-panel rounded-xl">
+                        <div class="mono text-[9px] text-cyan-500 mb-1">STG_02</div>
+                        <div class="text-sm font-bold text-white/90">Organic Funnel</div>
+                    </div>
+                    <div class="phase-card glass-panel rounded-xl">
+                        <div class="mono text-[9px] text-cyan-500 mb-1">STG_03</div>
+                        <div class="text-sm font-bold text-white/90">Authority Lock</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Directive Detail -->
+        <section class="grid md:grid-cols-2 gap-8 mb-40">
+            <div class="p-10 glass-panel rounded-3xl border-t-2 border-cyan-500">
+                <h4 class="text-xl font-bold text-white mb-4">Social Distribution</h4>
+                <p class="text-white/50 leading-relaxed mb-6">
+                    We stop treating Instagram and TikTok as standalone feeds. They become the high-volume gateway to the YouTube Channel. I use your existing platforms to push traffic organically through engineered distribution of your archive.
+                </p>
+                <div class="mono text-[9px] text-cyan-500/50">> NATIVE_SYNC_ACTIVE</div>
+            </div>
+            <div class="p-10 glass-panel rounded-3xl border-t-2 border-amber-500">
+                <h4 class="text-xl font-bold text-white mb-4">Zero-Stress Operation</h4>
+                <p class="text-white/50 leading-relaxed mb-6">
+                    I am not here to add to your schedule. I am here to install the system that handles the distribution entirely. You continue to build the network; I scale the legacy.
+                </p>
+                <div class="mono text-[9px] text-amber-500/50">> ARCHITECT_AUTONOMY_LEVEL_1</div>
+            </div>
+        </section>
+
+        <!-- Final Authorization -->
+        <section class="text-center py-20 relative">
+            <div class="absolute inset-0 bg-cyan-500/5 blur-3xl"></div>
+            <div class="relative">
+                <h3 class="text-4xl md:text-5xl font-black italic text-white mb-8 tracking-tighter">Big Money. No Stress.</h3>
+                <p class="text-white/40 mb-12 max-w-lg mx-auto font-light">
+                    Your name has already been mentioned in rooms you haven’t entered. The system is ready to receive the weight of the next contract.
+                </p>
+                <div class="mono text-[10px] text-cyan-400 tracking-[0.8em] uppercase animate-pulse">
+                    Awaiting Access Protocol
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="p-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 mono text-[9px] opacity-30 uppercase tracking-[0.2em] relative z-10">
+        <div>Transmission: Secure_Node_DJ</div>
+        <div>Date: 05.02.2027</div>
+        <div>Ref: Architectural_Contract_Alpha</div>
+    </footer>
+
+    <script>
+        const container = document.getElementById('graph-container');
+        const viewCounter = document.getElementById('view-counter');
+        const totalBars = 80;
+        
+        // Initial state
+        for (let i = 0; i < totalBars; i++) {
+            const bar = document.createElement('div');
+            bar.className = 'flex-1 bg-white/5 transition-all duration-[2000ms] ease-in-out';
+            bar.style.height = (Math.random() * 5 + 2) + '%';
+            container.appendChild(bar);
+        }
+
+        window.onload = () => {
+            setTimeout(() => {
+                const bars = Array.from(container.children);
+                const targetViews = 1000000;
+                
+                // Animate bars with an exponential authority curve
+                bars.forEach((bar, index) => {
+                    const progress = index / totalBars;
+                    const curve = Math.pow(progress, 3); // Sharp acceleration at the end
+                    const finalHeight = (curve * 90) + (Math.random() * 10) + 5;
+                    
+                    setTimeout(() => {
+                        bar.style.height = finalHeight + '%';
+                        bar.style.backgroundColor = `rgba(0, 242, 255, ${0.1 + (progress * 0.5)})`;
+                        if (progress > 0.8) {
+                            bar.style.boxShadow = `0 0 20px rgba(0, 242, 255, ${progress * 0.3})`;
+                        }
+                    }, index * 30);
+                });
+
+                // Counter Logic
+                const duration = 3000;
+                const startTime = performance.now();
+                
+                function update(now) {
+                    const elapsed = now - startTime;
+                    const p = Math.min(elapsed / duration, 1);
+                    const easeP = Math.pow(p, 4); // Fast climb at the end
+                    const val = Math.floor(61 + (easeP * (targetViews - 61)));
+                    
+                    if (val < 1000) {
+                        viewCounter.innerText = val;
+                    } else if (val < 1000000) {
+                        viewCounter.innerText = (val / 1000).toFixed(1) + 'K';
+                    } else {
+                        viewCounter.innerText = '1.0M';
+                        viewCounter.classList.add('text-cyan-400');
+                    }
+
+                    if (p < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            }, 1500);
+        };
+    </script>
+</body>
+</html>
+
