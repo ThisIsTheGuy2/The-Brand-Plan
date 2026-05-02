@@ -225,7 +225,7 @@
             <div class="relative">
                 <h3 class="text-4xl md:text-5xl font-black italic text-white mb-8 tracking-tighter">Solid Plan. No Stress.</h3>
                 <p class="text-white/40 mb-12 max-w-lg mx-auto font-light">
-                    Oliver, I'm not here to add to your to-do list, I'm here to execute.
+                    I'm here to execute.
                 </p>
                 <div class="mono text-[10px] text-cyan-400 tracking-[0.8em] uppercase animate-pulse">
                     Awaiting Access Protocol
@@ -257,7 +257,7 @@
         window.onload = () => {
             setTimeout(() => {
                 const bars = Array.from(container.children);
-                const targetViews = 1000000;
+                const targetViews = 100000000;
                 
                 // Animate bars with an exponential authority curve
                 bars.forEach((bar, index) => {
@@ -286,10 +286,10 @@
                     
                     if (val < 1000) {
                         viewCounter.innerText = val;
-                    } else if (val < 1000000) {
+                    } else if (val < 100000000) {
                         viewCounter.innerText = (val / 1000).toFixed(1) + 'K';
                     } else {
-                        viewCounter.innerText = '1.0M';
+                        viewCounter.innerText = '100.M';
                         viewCounter.classList.add('text-cyan-400');
                     }
 
